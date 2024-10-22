@@ -1,0 +1,138 @@
+/* Colores relacionados con tecnología */
+:root {
+    --tech-blue: #007bff;
+    --tech-green: #28a745;
+    --tech-gray: #343a40;
+    --tech-light-gray: #f8f9fa;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--tech-light-gray);
+    color: var(--tech-gray);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    background-color: var(--tech-blue);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 10px;
+    animation: pop-in 2s ease-in-out;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    background-color: var(--tech-green);
+    margin: 0;
+    padding: 10px 0;
+  }
+  
+  nav ul li {
+    margin: 0 30px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px; /* Aumenta el tamaño del texto en el nav */
+    padding: 15px 20px;
+  }
+  
+  nav ul li a:hover {
+    background-color: white;
+    color: var(--tech-green);
+    border-radius: 5px;
+  }
+  
+  main {
+    flex-grow: 1;
+  }
+  
+  section {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  h2 {
+    color: var(--tech-blue);
+  }
+  
+  footer {
+    background-color: var(--tech-gray);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
+  
+  /* Animaciones */
+  .fade-in {
+    animation: fadeIn 1.5s forwards;
+  }
+  
+  .slide-in {
+    animation: slideIn 1.5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes pop-in {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  }
+  
